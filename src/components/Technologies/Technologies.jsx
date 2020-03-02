@@ -8,6 +8,7 @@ import Sass from '../../assets/images/technologies/sass.svg';
 import Aws from '../../assets/images/technologies/aws.svg';
 import AwsWhite from '../../assets/images/technologies/aws-white.svg';
 import DarkModeContext from '../../DarkModeContext';
+import Loading, { UnLoader } from '../Loading';
 
 export default () => {
   const context = useContext(DarkModeContext);
@@ -38,7 +39,16 @@ export default () => {
 
   return (
     <div className="technologies">
-      {technologies.map((tech) => <Img title="ra" src={tech.img} key={tech} alt={tech.label} />)}
+      {technologies.map((tech) => (
+        <Img
+          title={tech.label}
+          src={tech.img}
+          key={tech}
+          alt={tech.label}
+          loader={<Loading />}
+          unloader={<UnLoader />}
+        />
+      ))}
     </div>
   );
 };

@@ -29,12 +29,12 @@ export default [
   },
   {
     title: {
-      en: 'Robust System',
-      id: 'Sistem Yang Kuat',
+      en: 'End to End Solution',
+      id: 'Solusi End to End',
     },
     description: {
-      en: 'We try to make our app always updated in order to provide better products',
-      id: 'Kami berusaha menjaga produk kami tetap dalam pembaharuan dalam rangka menyediakan produk yg lebih baik',
+      en: 'We develop front end and back end to make end to end solution',
+      id: 'Kami menggembangkan front end dan back end untuk menciptakan solusi end to end',
     },
     img: System,
   },
@@ -45,7 +45,7 @@ export default [
     },
     description: {
       en: 'We always try writing clean and readable code and passed by popular style guide linter',
-      id: 'Kami selalu meberusaha menulis kode yang rapi dan mudah dibaca serta lolos pada uji linter yg populer',
+      id: 'Kami selalu berusaha menulis kode yang rapi dan mudah dibaca serta lolos pada uji linter yg populer',
     },
     img: CodeReview,
   },
