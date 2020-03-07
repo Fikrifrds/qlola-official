@@ -1,7 +1,7 @@
 import slugify from '../utils/slugify';
 import {
-  p1, p2, p3, p4, p5,
-} from './languages/ProjectImages';
+  p1, p2, p3, p4, p5, p6,
+} from './ProjectImages';
 
 const originalHostName = 'https://qlola-storage.s3-ap-southeast-1.amazonaws.com/';
 const thumbnailHostname = 'https://ik.imagekit.io/qlola/tr:w-300/';
@@ -97,7 +97,7 @@ const projects = [
       en: 'Company Profile Website / Landing Page',
       id: 'Website Company Profile / Landing Page',
     },
-    imgPathName: 'images/project5.png',
+    imgPathName: 'images/project5/project5.png',
     originalHostName,
     thumbnailHostname,
     content: {
@@ -106,6 +106,26 @@ const projects = [
     },
     url: 'https://fikrifrds.github.io/ptekamasmotor',
     imageCollectionPathName: p5,
+  },
+  {
+    id: 6,
+    title: 'Point of Sales',
+    slug() {
+      return slugify(this.title);
+    },
+    description: {
+      en: 'Point of Sales',
+      id: 'Aplikasi Kasir Online',
+    },
+    imgPathName: 'images/project6/pos.png',
+    originalHostName,
+    thumbnailHostname,
+    content: {
+      en: 'We build Point of Sales Web Application can be used to manage sales in various businesses',
+      id: 'Kami membangun aplikasi berbasis web, kasir online, yang digunakan untuk mengelola penjualan di berbagai macam bisnis',
+    },
+    url: 'https://pos.qlola.com/',
+    imageCollectionPathName: p6,
   },
 ];
 
