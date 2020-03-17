@@ -43,7 +43,7 @@ export default () => {
         <Img
           title={tech.label}
           src={tech.img}
-          key={tech}
+          key={tech.label}
           alt={tech.label}
           loader={<Loading />}
           unloader={<UnLoader />}

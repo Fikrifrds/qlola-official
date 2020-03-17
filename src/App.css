@@ -809,6 +809,40 @@
   margin-right: 15vw;
 }
 
+.covid19 {
+  margin-top: 5vw;
+}
+.covid19 .confirmed, .covid19 .recovered, .covid19 .deaths {
+  font-size: 40px;
+  font-weight: bold;
+}
+.covid19 .lastUpdate {
+  margin-top: 5vh;
+}
+.covid19 .confirmed {
+  color: orange;
+}
+.covid19 .recovered {
+  color: green;
+}
+.covid19 .deaths {
+  color: red;
+}
+
+.global {
+  margin-top: 10vh;
+}
+
+.source {
+  margin-top: 20vh;
+}
+
+.country-picker {
+  height: 5vh;
+  font-size: 15px;
+  margin: 20px;
+}
+
 html {
   background-color: #fdfdfd;
   transition: background-color;
