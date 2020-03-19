@@ -7,6 +7,7 @@ export default {
   projects: 'Our Projects',
   aboutUs: 'About Us',
   contactUs: 'Contact Us',
+  covid19: 'COVID-19',
   blog: 'Blog',
   send: 'Send',
   processing: 'Processing...',

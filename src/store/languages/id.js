@@ -7,6 +7,7 @@ export default {
   projects: 'Proyek Kami',
   aboutUs: 'Tentang Kami',
   contactUs: 'Hubungi Kami',
+  covid19: 'COVID-19',
   blog: 'Blog',
   send: 'Kirim',
   processing: 'Memproses...',
