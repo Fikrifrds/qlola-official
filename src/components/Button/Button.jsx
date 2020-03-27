@@ -53,6 +53,7 @@ Button.propTypes = {
   outlined: PropTypes.bool,
   disabled: PropTypes.bool,
   to: PropTypes.string,
+  small: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -60,6 +61,7 @@ Button.defaultProps = {
   outlined: false,
   disabled: false,
   to: undefined,
+  small: false,
 };
 
 export default Button;

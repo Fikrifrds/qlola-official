@@ -17,6 +17,7 @@ const Global = () => {
         setLoading(false);
       })
       .catch((err) => {
+        console.log(err);
         setError(true);
       });
   }, [error]);

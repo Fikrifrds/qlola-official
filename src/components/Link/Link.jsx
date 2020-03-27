@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import { LanguageContext } from '../../context/LanguageContext';
 
@@ -34,4 +35,30 @@ export const NewNavLink = ({
       {children}
     </NavLink>
   );
+};
+
+NewLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+NewLink.defaultProps = {
+  className: '',
+  onClick: undefined,
+};
+
+NewNavLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  activeClassName: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+NewNavLink.defaultProps = {
+  className: '',
+  activeClassName: '',
+  onClick: undefined,
 };

@@ -24,6 +24,6 @@ module.exports = {
   rules: {
     "no-console": "off",
     "react/button-has-type": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
   },
 };

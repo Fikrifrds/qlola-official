@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import Loading from '../../components/Loading';
 import Card from '../../components/Card';
 
 const ByCountry = ({
-  country, value, loading, setLoading,
+  country, loading, setLoading,
 }) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
@@ -13,7 +14,7 @@ const ByCountry = ({
   useEffect(() => {
     if (noData) setNoData(false);
     if (error) setError(false);
-    fetch(`https://covid19.mathdro.id/api/countries/${value}`)
+    fetch(`https://covid19.mathdro.id/api/countries/${country.iso2}`)
       .then((res) => res.json())
       .then((item) => {
         if (!item.error) {
@@ -28,7 +29,7 @@ const ByCountry = ({
         console.log(err);
         setError(true);
       });
-  }, [value, error, loading]);
+  }, [country, error, loading, noData, setLoading]);
 
   if (loading) {
     return <Loading />;
@@ -43,7 +44,7 @@ const ByCountry = ({
       <p className="title">
         Country :
         {' '}
-        {country}
+        {country.name}
       </p>
       <div className="cardContainer">
         <Card title="Confirmed">
@@ -63,6 +64,13 @@ const ByCountry = ({
       </p>
     </div>
   );
+};
+
+
+ByCountry.propTypes = {
+  country: PropTypes.objectOf(PropTypes.string).isRequired,
+  loading: PropTypes.bool.isRequired,
+  setLoading: PropTypes.func.isRequired,
 };
 
 export default ByCountry;

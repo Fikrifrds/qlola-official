@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const BurgerMenu = ({ toggleMenu, isMenuOpen, isDark }) => {
+const BurgerMenu = ({ toggleMenu, isDark }) => {
   const BurgerMenuIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="burger-icon">
       <path d="M0 0h24v24H0z" fill="none" />
@@ -9,10 +10,15 @@ const BurgerMenu = ({ toggleMenu, isMenuOpen, isDark }) => {
   );
 
   return (
-    <div onClick={toggleMenu} className="menu-icon">
+    <div onClick={toggleMenu} className="menu-icon" aria-hidden="true">
       <BurgerMenuIcon />
     </div>
   );
+};
+
+BurgerMenu.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
+  isDark: PropTypes.bool.isRequired,
 };
 
 export default BurgerMenu;

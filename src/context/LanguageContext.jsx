@@ -1,18 +1,16 @@
 import React, {
   useState, createContext, useContext, useEffect,
 } from 'react';
-import { defaultLocale } from '../utils/config';
-
+import PropTypes from 'prop-types';
+import defaultLocale from '../utils/config';
 import { languageOptions, dictionaryList } from '../store/languages';
 
-// create the language context with default selected language
 export const LanguageContext = createContext({
   language: languageOptions.find((lang) => lang.id === defaultLocale),
   dictionary: dictionaryList[defaultLocale],
 });
 
-// it provides the language context to app
-export default function LanguageProvider(props) {
+const LanguageProvider = (props) => {
   const languageContext = useContext(LanguageContext);
   const [language, setLanguage] = useState(languageContext.language);
   const [dictionary, setDictionary] = useState(languageContext.dictionary);
@@ -49,16 +47,22 @@ export default function LanguageProvider(props) {
     addedLocale,
   };
 
+  const { children } = props;
   return (
     <LanguageContext.Provider value={provider}>
-      {props.children}
+      {children}
     </LanguageContext.Provider>
   );
-}
+};
 
-// get text according to id & current language
 export function Text(props) {
   const languageContext = useContext(LanguageContext);
 
   return languageContext.dictionary[props.tid];
 }
+
+LanguageProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default LanguageProvider;

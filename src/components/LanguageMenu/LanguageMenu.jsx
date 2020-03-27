@@ -30,7 +30,6 @@ export default () => {
           </option>
         ))}
       </select>
-      <label htmlFor="language-menu" />
     </>
   );
 };

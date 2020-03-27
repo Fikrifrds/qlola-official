@@ -23,7 +23,7 @@ const Header = ({ light }) => {
       <div className={className.join(' ')}>
         <Logo text="Qlola" />
         <div className="menu-container">
-          <BurgerMenu {...{ toggleMenu, isMenuOpen, isDark }} />
+          <BurgerMenu toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} isDark={isDark} />
           <Menu />
           <DarkModeToggle />
         </div>

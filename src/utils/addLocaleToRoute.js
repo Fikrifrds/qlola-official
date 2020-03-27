@@ -1,4 +1,4 @@
-import { defaultLocale } from './config';
+import defaultLocale from './config';
 
 export default () => {
   const localeId = localStorage.getItem('localeId');

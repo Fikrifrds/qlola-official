@@ -13,7 +13,11 @@ const DarkModeToggle = () => {
   }
 
   return (
-    <div className="dark-mode-toggle" onClick={toogleDarkMode}>
+    <div
+      className="dark-mode-toggle"
+      onClick={toogleDarkMode}
+      aria-hidden="true"
+    >
       <img className="dark-mode-icon moon" src={Moon} alt="moon" />
       <img className="dark-mode-icon" src={Sun} alt="moon" />
       <div className={className.join(' ')} />

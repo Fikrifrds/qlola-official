@@ -1,1 +1,2 @@
-export const defaultLocale = 'id';
+const defaultLocale = 'id';
+export default defaultLocale;

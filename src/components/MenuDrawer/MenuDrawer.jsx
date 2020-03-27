@@ -1,19 +1,24 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from '../Link';
 import DarkMenuContext from '../../DarkModeContext';
 import menu from '../../store/menu';
 import { Text } from '../../context/LanguageContext';
 import LanguageMenu from '../LanguageMenu';
 
-export default ({ toggleMenuFiredClosed }) => {
+const Nav = ({ item }) => {
   const context = useContext(DarkMenuContext);
-  const { toggleMenu, isDark } = context;
-
-  const Nav = ({ item }) => (
+  const { toggleMenu } = context;
+  return (
     <NavLink to={item.route} className="menu-drawer-link" activeClassName="selected" onClick={toggleMenu}>
       <Text tid={item.id} />
     </NavLink>
   );
+};
+
+const MenuDrawer = ({ toggleMenuFiredClosed }) => {
+  const context = useContext(DarkMenuContext);
+  const { toggleMenu, isDark } = context;
 
   const className = ['menu-drawer'];
   const backDrop = ['back-drop'];
@@ -37,7 +42,11 @@ export default ({ toggleMenuFiredClosed }) => {
 
   return (
     <>
-      <div className={backDrop.join(' ')} onClick={toggleMenu} />
+      <div
+        className={backDrop.join(' ')}
+        onClick={toggleMenu}
+        aria-hidden="true"
+      />
       <div className={className.join(' ')}>
         <CloseMenuButton />
         <nav className="menu-link-container">
@@ -48,3 +57,13 @@ export default ({ toggleMenuFiredClosed }) => {
     </>
   );
 };
+
+MenuDrawer.propTypes = {
+  toggleMenuFiredClosed: PropTypes.bool.isRequired,
+};
+
+Nav.propTypes = {
+  item: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+export default MenuDrawer;

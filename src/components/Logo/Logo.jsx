@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from '../Link';
 import DarkModeContext from '../../DarkModeContext';
 
-export default ({
-  src, alt = 'Logo', width = 100, text,
+const Logo = ({
+  src, alt, width, text,
 }) => {
   const context = useContext(DarkModeContext);
   const { isDark } = context;
@@ -16,8 +17,24 @@ export default ({
   return (
     <div className="logo">
       <Link to="/" className={className.join(' ')}>
-        {src ? <img {...{ src, alt, width }} /> : text}
+        {src ? <img src={src} alt={alt} width={width} /> : text}
       </Link>
     </div>
   );
 };
+
+Logo.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  width: PropTypes.number,
+  text: PropTypes.string,
+};
+
+Logo.defaultProps = {
+  src: '',
+  alt: 'Logo',
+  width: 100,
+  text: 'Qlola',
+};
+
+export default Logo;

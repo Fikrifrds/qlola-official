@@ -57,7 +57,14 @@ export default () => {
           <hr className="underline" />
           <div className="gallery">
             { currentProject.imageCollectionPathName.map((image) => (
-              <Card width={300} key={image.urlPathName} onClick={onChooseImage(currentProject.originalHostName + image.urlPathName, image.description[language.id])}>
+              <Card
+                width={300}
+                key={image.urlPathName}
+                onClick={onChooseImage(
+                  currentProject.originalHostName + image.urlPathName,
+                  image.description[language.id],
+                )}
+              >
                 <div className="image-item">
                   <Img
                     width="250px"
@@ -75,7 +82,13 @@ export default () => {
           </div>
         </div>
         <Modal isOpen={modalOpen} onClose={onCloseModal}>
-          <Img src={selectedImage} className="image-show" loader={<Loading />} unloader={<UnLoader />} alt={selectedDescription} />
+          <Img
+            src={selectedImage}
+            className="image-show"
+            loader={<Loading />}
+            unloader={<UnLoader />}
+            alt={selectedDescription}
+          />
           <p className="description-show">{selectedDescription}</p>
         </Modal>
       </div>

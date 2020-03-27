@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-export default ({ children, isOpen, onClose }) => {
+const Modal = ({ children, isOpen, onClose }) => {
   const className = ['modal-container'];
   if (isOpen) {
     className.push(`${className[0]}__open`);
@@ -18,10 +19,18 @@ export default ({ children, isOpen, onClose }) => {
   }, [onClose]);
 
   return (
-    <div className={className.join(' ')} onClick={onClose}>
+    <div className={className.join(' ')} onClick={onClose} aria-hidden="true">
       <div className="modal">
         {children}
       </div>
     </div>
   );
 };
+
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+
+export default Modal;

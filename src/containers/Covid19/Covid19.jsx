@@ -3,9 +3,8 @@ import Global from './Global';
 import ByCountry from './ByCountry';
 
 const Covid19 = () => {
-  const [country, setCountry] = useState('Indonesia');
-  const [value, setValue] = useState('ID');
-  const [countries, setCountries] = useState({});
+  const [selectedCountry, setSelectedCountry] = useState({ name: 'Indonesia', iso2: 'ID' });
+  const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,23 +15,21 @@ const Covid19 = () => {
       });
   }, []);
 
-  const keys = Object.keys(countries);
-
   const onChangeValue = (e) => {
     setLoading(true);
-    setCountry(e.target.value);
-    setValue(countries[e.target.value]);
+    const foundCountry = countries.find((item) => item.iso2 === e.target.value);
+    setSelectedCountry(foundCountry);
   };
 
   return (
     <div className="covid19">
       <p className="title">COVID-19 Cases</p>
-      <select onChange={onChangeValue} value={country} className="country-picker">
-        {keys.map((key) => (
-          <option value={key} key={key}>{key}</option>
+      <select onChange={onChangeValue} value={selectedCountry.iso2} className="country-picker">
+        {countries.map((country) => (
+          <option value={country.iso2} key={country.name}>{country.name}</option>
         ))}
       </select>
-      <ByCountry loading={loading} value={value} country={country} setLoading={setLoading} />
+      <ByCountry loading={loading} country={selectedCountry} setLoading={setLoading} />
       <Global />
       <div className="source">
         <p>API Source : https://covid19.mathdro.id/api</p>

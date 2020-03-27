@@ -32,9 +32,9 @@ const Login = () => {
     setMessageError([]);
     if (!fullName || !emailAddress || !messageBody) {
       const message = [];
-      !fullName && message.push('Full Name');
-      !emailAddress && message.push('Email Address');
-      !messageBody && message.push('Message');
+      if (!fullName) message.push('Full Name');
+      if (!emailAddress) message.push('Email Address');
+      if (!messageBody) message.push('Message');
       setMessageError(message);
       return;
     }
@@ -55,6 +55,8 @@ const Login = () => {
   };
 
   const context = useContext(LanguageContext);
+  const { dictionary } = context;
+
   return (
     <div className="contact">
       <Card className="contact-card">
@@ -84,7 +86,7 @@ const Login = () => {
 
                 <form onSubmit={handleSubmit} noValidate className="form">
                   <input
-                    placeholder={context.dictionary.fullName}
+                    placeholder={dictionary.fullName}
                     type="text"
                     value={fullName}
                     name="fullName"
@@ -93,7 +95,7 @@ const Login = () => {
                     className="input"
                   />
                   <input
-                    placeholder={context.dictionary.emailAddress}
+                    placeholder={dictionary.emailAddress}
                     type="email"
                     value={emailAddress}
                     name="emailAddress"
@@ -101,7 +103,7 @@ const Login = () => {
                     required
                   />
                   <input
-                    placeholder={context.dictionary.phoneNumber}
+                    placeholder={dictionary.phoneNumber}
                     type="text"
                     autoComplete="off"
                     value={phoneNumber}
@@ -112,7 +114,7 @@ const Login = () => {
                   <textarea
                     className="form-control form-control-alternative"
                     rows="3"
-                    placeholder={context.dictionary.messageBody}
+                    placeholder={dictionary.messageBody}
                     type="text"
                     autoComplete="off"
                     value={messageBody}
