@@ -83,7 +83,6 @@ const Login = () => {
                     <div key={message}>{`${message} is required`}</div>
                   ))}
                 </div>
-
                 <form onSubmit={handleSubmit} noValidate className="form">
                   <input
                     placeholder={dictionary.fullName}
@@ -110,7 +109,6 @@ const Login = () => {
                     name="phoneNumber"
                     onChange={handleChangeNumber}
                   />
-
                   <textarea
                     className="form-control form-control-alternative"
                     rows="3"
@@ -122,7 +120,6 @@ const Login = () => {
                     required
                     onChange={handleChangeMessage}
                   />
-
                   <div className="text-center">
                     <Button small>
                       {isSending ? <Text tid="processing" /> : <Text tid="send" />}
@@ -134,6 +131,11 @@ const Login = () => {
 
         </div>
       </Card>
+      <div>
+        Or email to
+        {' '}
+        <a href="mailto:fikri@qlola.com?subject=Hello Fikri, Founder of Qlola" className="link link-bold">fikri@qlola.com</a>
+      </div>
     </div>
   );
 };

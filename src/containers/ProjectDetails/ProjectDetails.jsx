@@ -47,7 +47,7 @@ export default () => {
       <div>
         <div>
           Site Url:
-          <a target="_blank" rel="noopener noreferrer" href={currentProject.url}>
+          <a target="_blank" rel="noopener noreferrer" href={currentProject.url} className="link">
             {' '}
             {currentProject.url}
           </a>

@@ -30,6 +30,14 @@ html {
     text-decoration: none;
     color: inherit;
   }
+
+  .link {
+    color: $blue;
+
+    &-bold {
+      font-weight: bold;
+    }
+  }
 }
 
 .App {

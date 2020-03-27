@@ -851,6 +851,12 @@ html a {
   text-decoration: none;
   color: inherit;
 }
+html .link {
+  color: #0072b1;
+}
+html .link-bold {
+  font-weight: bold;
+}
 
 .App {
   min-height: 100vh;
