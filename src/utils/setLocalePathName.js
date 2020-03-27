@@ -1,4 +1,4 @@
-import defaultLocale from './config';
+import { defaultLocale } from './config';
 import { languageIds } from '../store/languages';
 
 export default (value) => {

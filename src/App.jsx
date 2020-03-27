@@ -9,7 +9,7 @@ import MenuDrawer from './components/MenuDrawer';
 import Footer from './components/Footer';
 import LanguageProvider from './context/LanguageContext';
 import setLocalePathName from './utils/setLocalePathName';
-import defaultLocale from './utils/config';
+import { defaultLocale } from './utils/config';
 import ScrollToTop from './ScrollToTop';
 import { languageIds } from './store/languages';
 import AppRouter from './AppRouter';

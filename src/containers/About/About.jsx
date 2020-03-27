@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '../../components/Avatar';
 import { Text } from '../../context/LanguageContext';
-import fikriAvatar from '../../assets/images/fikri-avatar.png'
+import fikriAvatar from '../../assets/images/fikri-avatar.png';
 
 export default () => (
   <div className="about">

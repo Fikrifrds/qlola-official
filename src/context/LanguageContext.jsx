@@ -2,7 +2,7 @@ import React, {
   useState, createContext, useContext, useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
-import defaultLocale from '../utils/config';
+import { defaultLocale } from '../utils/config';
 import { languageOptions, dictionaryList } from '../store/languages';
 
 export const LanguageContext = createContext({

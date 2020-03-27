@@ -4,6 +4,7 @@ import MailSent from '../../assets/images/mail-sent.svg';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 import { Text, LanguageContext } from '../../context/LanguageContext';
+import { emailApiEndPoint } from '../../utils/config';
 
 const Login = () => {
   const [fullName, setFullName] = useState('');
@@ -27,7 +28,7 @@ const Login = () => {
     setMessageBody(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setMessageError([]);
     if (!fullName || !emailAddress || !messageBody) {
@@ -40,7 +41,7 @@ const Login = () => {
     }
 
     setIsSending(true);
-    await fetch('https://qlola-api.herokuapp.com/email', {
+    fetch(emailApiEndPoint, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -49,9 +50,10 @@ const Login = () => {
         phoneNumber,
         messageBody,
       }),
+    }).then(() => {
+      setIsSending(false);
+      setIsSent(true);
     });
-    setIsSending(false);
-    setIsSent(true);
   };
 
   const context = useContext(LanguageContext);
