@@ -1,0 +1,19 @@
+.avatar {
+    margin: 1vw;
+    img {
+        border-radius: 50%;
+    }
+    &-large {
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    &-small {
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

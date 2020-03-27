@@ -1,0 +1,25 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.text {
+    text-align: left;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.sub-title {
+    font-size: 20px;
+}
+
+.image-home {
+    width: 500px;
+    @media (max-width: 640px) {
+        width: 300px;
+    }
+}

@@ -1,0 +1,30 @@
+.modal-container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+
+    &__open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+}
+
+.modal {
+    position:fixed;
+    background: white;
+    width: 80vw;
+    min-height: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

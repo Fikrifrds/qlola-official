@@ -1,0 +1,41 @@
+.button {
+    min-width: 10vw;
+    width: auto;
+    border-radius: 4vw;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: auto;
+    border: 1.5px solid $blue;
+    cursor: pointer;
+    background-color: $blue;
+    margin: 10px;
+    outline: 0;
+
+    &__outlined {
+        color: black;
+        background-color: $white;
+        border: 1.5px solid black;
+
+        &__dark {
+            // color: white;
+            // background-color: $dark-mode;
+            border: 2px solid white;
+        }
+    }
+
+    &__disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &__small {
+        min-width: 7vw;
+        font-size: 14px;
+    }
+
+    .children {
+        padding: 0.7vw;
+    }
+    
+}

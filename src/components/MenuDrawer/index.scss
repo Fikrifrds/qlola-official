@@ -1,0 +1,104 @@
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.menu-drawer {
+    position:fixed;
+    width: 70vw;
+    height: 100vh;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
+    z-index: 50;
+
+    &-link {
+        text-align: left;
+        text-decoration: none;
+        color: $white;
+        margin-top: 5vw;
+        font-size: 20px;
+    }
+
+    &__dark {
+        background-color: $white;
+        .menu-drawer-link {
+            color: $dark;
+        }
+    }
+
+    &__closed {
+        animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.back-drop {
+    position:fixed;
+    background-color: $dark;
+    opacity: 0.2;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    margin-right: 30vw;
+    animation: fadeIn 0.5s;
+    z-index: 40;
+
+    &__dark {
+        background-color: $white;
+    }
+
+    &__closed {
+        animation: fadeOut 0.5s;
+    }
+}
+
+.menu-link-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+}
+
+.close-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}

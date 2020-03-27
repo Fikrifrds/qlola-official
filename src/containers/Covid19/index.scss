@@ -1,0 +1,37 @@
+.covid19 {
+    margin-top: 5vw;
+    .confirmed, .recovered, .deaths {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .lastUpdate {
+        margin-top: 5vh;
+    }
+
+    .confirmed {
+        color: orange;
+    }
+
+    .recovered {
+        color: green;
+    }
+
+    .deaths {
+        color: red;
+    }
+}   
+
+.global {
+    margin-top: 10vh;
+}
+
+.source {
+    margin-top: 20vh;
+}
+
+.country-picker {
+    height: 5vh;
+    font-size: 15px;
+    margin: 20px;
+}

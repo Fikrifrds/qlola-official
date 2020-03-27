@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+    justify-content: flex-end;
+
+    &-link {
+        text-decoration: none;
+        color: lightsteelblue;
+        font-size: auto;
+        width: auto;
+        padding: 5px;
+        margin: auto;
+        margin-right: 2vw;
+        cursor: pointer;
+        &:hover {
+            color: white;
+        }
+
+    }
+
+    .selected {
+        color: white
+    }
+    
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
