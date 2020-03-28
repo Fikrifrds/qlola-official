@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Moon from '../../assets/icons/moon.svg';
 import Sun from '../../assets/icons/sun.svg';
-import DarkModeContext from '../../DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 const DarkModeToggle = () => {
   const className = ['toggle-button'];

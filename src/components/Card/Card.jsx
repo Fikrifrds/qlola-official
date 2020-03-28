@@ -4,7 +4,14 @@ import { Redirect } from 'react-router-dom';
 import addedLocaleToRoute from '../../utils/addLocaleToRoute';
 
 const Card = ({
-  width, height, shadow, title, onClick, to, children, className,
+  width,
+  height,
+  shadow,
+  title,
+  onClick,
+  to,
+  children,
+  className,
 }) => {
   const [redirect, setRedirect] = useState(false);
 
@@ -40,7 +47,6 @@ const Card = ({
   );
 };
 
-
 Card.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
@@ -56,10 +62,10 @@ Card.defaultProps = {
   width: null,
   height: null,
   shadow: false,
-  title: '',
+  title: null,
   onClick: undefined,
-  to: '',
-  className: '',
+  to: null,
+  className: null,
 };
 
 export default Card;

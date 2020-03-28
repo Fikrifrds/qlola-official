@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../Link';
-import DarkModeContext from '../../DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 const Logo = ({
   src, alt, width, text,

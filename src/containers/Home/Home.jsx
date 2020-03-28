@@ -13,7 +13,6 @@ export default () => (
         <Button outlined to="/contact-us"><Text tid="contactUs" /></Button>
         <Button to="/projects"><Text tid="projects" /></Button>
       </div>
-      {/* <img className="flex-item image-home" src={HomeBanner} alt="Home" /> */}
     </div>
     <Technologies />
     <Features />

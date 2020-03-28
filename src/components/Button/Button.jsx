@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import DarkModeContext from '../../DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 import addedLocaleToRoute from '../../utils/addLocaleToRoute';
 
 const Button = ({
@@ -60,7 +60,7 @@ Button.defaultProps = {
   onClick: undefined,
   outlined: false,
   disabled: false,
-  to: undefined,
+  to: null,
   small: false,
 };
 

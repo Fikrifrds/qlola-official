@@ -1,4 +1,16 @@
 .language-menu {
-    margin: auto;
-    margin-right: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+
+    &__light {
+        color: white;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 }

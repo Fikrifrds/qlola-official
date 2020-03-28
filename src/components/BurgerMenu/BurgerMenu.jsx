@@ -17,8 +17,12 @@ const BurgerMenu = ({ toggleMenu, isDark }) => {
 };
 
 BurgerMenu.propTypes = {
-  toggleMenu: PropTypes.func.isRequired,
+  toggleMenu: PropTypes.func,
   isDark: PropTypes.bool.isRequired,
+};
+
+BurgerMenu.defaultProps = {
+  toggleMenu: undefined,
 };
 
 export default BurgerMenu;

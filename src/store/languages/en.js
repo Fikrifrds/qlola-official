@@ -1,7 +1,7 @@
 export default {
   heroTitle: 'Build business solution with modern web technology',
   heroSubTitle: 'We Provide high quality web application to boost your business',
-  companyFocus: 'A Web Solution',
+  companyFocus: 'Web Solution Company',
   companyDescription: 'A Web Solution Company ready to serve your needs with latest technology, Best available solutions that makes your Business Experience much Better. We are updated with Knowledge and Experience of latest technologies, tools and platform which will help better.',
   home: 'Home',
   projects: 'Our Projects',

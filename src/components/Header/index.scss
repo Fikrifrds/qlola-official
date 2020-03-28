@@ -1,9 +1,3 @@
-%one-edge-shadow {
-	-webkit-box-shadow: 0 8px 6px -6px gray;
-	   -moz-box-shadow: 0 8px 6px -6px gray;
-	        box-shadow: 0 8px 6px -6px gray;
-}
-
 .headerContainer {
     border-bottom: 1px solid lightgray;
 }
@@ -15,8 +9,6 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: $dark;
-    // font-weight: bold;
-    // @extend %one-edge-shadow;
     margin-right: 10vw;
     margin-left: 10vw;
     &-fixed {

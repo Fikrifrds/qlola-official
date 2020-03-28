@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Img from 'react-image';
-import DarkModeContext from '../../DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 import Loading, { UnLoader } from '../Loading';
 import technologies from '../../store/technologies';
 

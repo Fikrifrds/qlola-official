@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Logo from '../Logo';
 import DarkModeToggle from '../DarkModeToggle';
-import DarkModeContext from '../../DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 import BurgerMenu from '../BurgerMenu';
 import Menu from '../Menu';
 
