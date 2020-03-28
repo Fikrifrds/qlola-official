@@ -727,6 +727,16 @@ select {
 .contact-card .email-sent {
   margin-top: 20%;
 }
+.contact-card .email-sent .sent-icon {
+  margin-top: 20px;
+}
+
+.message {
+  color: "red";
+  text-align: "center";
+  font-size: "small";
+  padding-bottom: "10px";
+}
 
 .hero {
   display: flex;
