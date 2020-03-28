@@ -22,7 +22,7 @@ export default () => {
   }
 
   return (
-    <>
+    <label htmlFor="language-menu">
       <select
         id="language-menu"
         onChange={handleLanguageChange}
@@ -38,6 +38,6 @@ export default () => {
           </option>
         ))}
       </select>
-    </>
+    </label>
   );
 };
