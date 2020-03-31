@@ -18,4 +18,5 @@ export default {
   phoneNumber: 'Phone Number',
   messageBody: 'Write your message here...',
   features: 'Features',
+  homeTitle: 'Web Solution Company',
 };

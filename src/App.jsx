@@ -4,6 +4,7 @@ import React, {
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import './App.css';
 import Header from './components/Header';
 import MenuDrawer from './components/MenuDrawer';
@@ -13,6 +14,7 @@ import setLocalePathName from './utils/setLocalePathName';
 import { defaultLocale } from './utils/config';
 import ScrollToTop from './ScrollToTop';
 import { languageIds } from './store/languages';
+import { Text } from './context/LanguageContext';
 import AppRouter from './AppRouter';
 
 function App() {
@@ -40,6 +42,15 @@ function App() {
 
   return (
     <div className={className.join(' ')}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Qlola -
+          {Text({ tid: 'homeTitle' })}
+        </title>
+        <meta name="description" content={Text({ tid: 'homeTitle' })} />
+        <link rel="canonical" href="https://qlola.com" />
+      </Helmet>
       <Router>
         <ScrollToTop />
         <Header light />

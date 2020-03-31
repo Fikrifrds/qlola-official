@@ -18,4 +18,5 @@ export default {
   phoneNumber: 'Nomor Telpon',
   messageBody: 'Tulis pesan kamu disini...',
   features: 'Fitur-fitur',
+  homeTitle: 'Pengembang Aplikasi Web',
 };

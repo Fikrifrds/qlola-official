@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 70vw;
+  margin-left: 15vw;
 }
 .technologies Img {
   padding: 2vw;
@@ -865,6 +867,7 @@ select {
   height: 5vh;
   font-size: 15px;
   margin: 20px;
+  padding-left: 10px;
 }
 
 html {
