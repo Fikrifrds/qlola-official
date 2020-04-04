@@ -37,7 +37,7 @@ const projects = [
       en: 'E-Commerce System',
       id: 'Sistem Toko Online',
     },
-    imgPathName: 'images/project2.png',
+    imgPathName: 'images/project2/project2.png',
     originalHostName,
     thumbnailHostname,
     content: {
