@@ -19,4 +19,13 @@ export default {
   messageBody: 'Write your message here...',
   features: 'Features',
   homeTitle: 'Web Solution Company',
+  confirmed: 'Confirmed',
+  recovered: 'Recovered',
+  deaths: 'Deaths',
+  country: 'Country',
+  lastUpdate: 'Last Update',
+  apiSource: 'API Source',
+  from: 'from',
+  global: 'Global',
+  noData: 'No data',
 };

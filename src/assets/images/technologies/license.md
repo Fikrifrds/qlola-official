@@ -37,5 +37,8 @@ css3
 git
 <a href="https://iconscout.com/icons/git" target="_blank">Git Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
 
+vue
+<a href="https://iconscout.com/icons/vue" target="_blank">Vue Logo Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
+
 node #333
 aws #252f3e

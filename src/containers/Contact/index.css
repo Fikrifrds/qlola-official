@@ -1,0 +1,82 @@
+.contact {
+  padding-top: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form input, .form textarea {
+  height: 20px;
+  margin: 10px;
+  outline: 0;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  border: solid 1px #ccc;
+}
+
+.form textarea {
+  height: auto;
+}
+
+.contact-card {
+  width: 450px;
+  min-height: 300px;
+}
+
+@media (max-width: 470px) {
+  .contact-card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 300px) {
+  .contact-card {
+    width: 270px;
+  }
+}
+
+.contact-card .email-sent {
+  margin-top: 20%;
+}
+
+.contact-card .email-sent .sent-icon {
+  margin-top: 20px;
+}
+
+.message {
+  color: 'red';
+  text-align: 'center';
+  font-size: 'small';
+  padding-bottom: '10px';
+}
+/*# sourceMappingURL=index.css.map */

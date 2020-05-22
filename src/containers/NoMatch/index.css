@@ -1,0 +1,36 @@
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.text {
+  text-align: left;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.sub-title {
+  font-size: 20px;
+}
+
+.image-home {
+  width: 500px;
+}
+
+@media (max-width: 640px) {
+  .image-home {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

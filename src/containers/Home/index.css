@@ -1,0 +1,84 @@
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5vw;
+}
+
+@media (max-width: 1020px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.hero-title {
+  font-size: 40px;
+  padding-right: 20vw;
+  padding-left: 20vw;
+  font-weight: bold;
+}
+
+@media (min-width: 1020px) {
+  .hero-title {
+    padding-right: 30vw;
+    padding-left: 30vw;
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero-title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 28px;
+  }
+}
+
+.hero-sub-title {
+  font-size: 27px;
+  padding-right: 20vw;
+  padding-left: 20vw;
+}
+
+@media (min-width: 1020px) {
+  .hero-sub-title {
+    padding-right: 30vw;
+    padding-left: 30vw;
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero-sub-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-sub-title {
+    font-size: 18px;
+  }
+}
+
+.image-home {
+  width: 50%;
+}
+
+.flex-item {
+  margin: auto;
+}
+
+@media (max-width: 1020px) {
+  .flex-item {
+    margin-bottom: 6vw;
+  }
+}
+/*# sourceMappingURL=index.css.map */

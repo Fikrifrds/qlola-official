@@ -1,0 +1,21 @@
+.menu-icon {
+  display: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.menu-icon__dark {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+.burger-icon {
+  width: 35px;
+  height: 35px;
+}
+/*# sourceMappingURL=index.css.map */

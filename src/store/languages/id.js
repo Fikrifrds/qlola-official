@@ -19,4 +19,14 @@ export default {
   messageBody: 'Tulis pesan kamu disini...',
   features: 'Fitur-fitur',
   homeTitle: 'Pengembang Aplikasi Web',
+  confirmed: 'Terkonfirmasi',
+  recovered: 'Sembuh',
+  deaths: 'Meninggal Dunia',
+  country: 'Negara',
+  lastUpdate: 'Terakhir diperbaharui',
+  apiSource: 'Sumber API',
+  from: 'dari',
+  global: 'Seluruh Dunia',
+  noData: 'Tidak terdapat data',
+
 };

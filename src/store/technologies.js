@@ -7,6 +7,7 @@ import ExpressJsWhite from '../assets/images/technologies/express-white.svg';
 import NodeJsWhite from '../assets/images/technologies/node-white.svg';
 import MongoDB from '../assets/images/technologies/mongodb.svg';
 import Sass from '../assets/images/technologies/sass.svg';
+import VueJs from '../assets/images/technologies/vue.svg';
 // import Php from '../assets/images/technologies/php.svg';
 // import Laravel from '../assets/images/technologies/laravel.svg';
 // import MySql from '../assets/images/technologies/mysql.svg';
@@ -29,6 +30,10 @@ export default (isDark) => [
   {
     label: 'ReactJs',
     img: ReactJs,
+  },
+  {
+    label: 'VueJs',
+    img: VueJs,
   },
   {
     label: 'NodeJs',

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 import Loading from '../../components/Loading';
 import Card from '../../components/Card';
+import { Text } from '../../context/LanguageContext';
 
 const Global = () => {
   const [data, setData] = useState([]);
@@ -32,20 +33,21 @@ const Global = () => {
 
   return (
     <div className="covid19">
-      <p className="title">Global</p>
+      <p className="title"><Text tid="global" /></p>
       <div className="cardContainer">
-        <Card title="Confirmed">
-          <p className="confirmed">{data.confirmed.value}</p>
+        <Card title={<Text tid="confirmed" />}>
+          <p className="confirmed">{data.confirmed.value.toLocaleString()}</p>
         </Card>
-        <Card title="Recovered">
-          <p className="recovered">{data.recovered.value}</p>
+        <Card title={<Text tid="recovered" />}>
+          <p className="recovered">{data.recovered.value.toLocaleString()}</p>
         </Card>
-        <Card title="Deaths">
-          <p className="deaths">{data.deaths.value}</p>
+        <Card title={<Text tid="deaths" />}>
+          <p className="deaths">{data.deaths.value.toLocaleString()}</p>
         </Card>
       </div>
       <p className="lastUpdate">
-        Last Update :
+        <Text tid="lastUpdate" />
+        :
         {' '}
         {format(new Date(data.lastUpdate), 'dd MMMM yyyy HH:mm')}
       </p>

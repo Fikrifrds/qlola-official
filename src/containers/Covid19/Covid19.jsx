@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Global from './Global';
 import ByCountry from './ByCountry';
+import { Text } from '../../context/LanguageContext';
 
 const Covid19 = () => {
   const [selectedCountry, setSelectedCountry] = useState({ name: 'Indonesia', iso2: 'ID' });
@@ -32,8 +33,17 @@ const Covid19 = () => {
       <ByCountry loading={loading} country={selectedCountry} setLoading={setLoading} />
       <Global />
       <div className="source">
-        <p>API Source : https://covid19.mathdro.id/api</p>
-        <p>Data from Johns Hopkins CSSE</p>
+        <p>
+          <Text tid="apiSource" />
+          : https://covid19.mathdro.id/api
+        </p>
+        <p>
+          Data
+          {' '}
+          <Text tid="from" />
+          {' '}
+          Johns Hopkins CSSE
+        </p>
       </div>
     </div>
   );

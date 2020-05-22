@@ -1,0 +1,34 @@
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: lightsteelblue;
+  font-size: auto;
+  width: auto;
+  padding: 5px;
+  margin: auto;
+  margin-right: 2vw;
+  cursor: pointer;
+}
+
+.menu-link:hover {
+  color: white;
+}
+
+.menu .selected {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */

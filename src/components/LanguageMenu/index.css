@@ -1,0 +1,17 @@
+.language-menu {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.language-menu__light {
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+/*# sourceMappingURL=index.css.map */

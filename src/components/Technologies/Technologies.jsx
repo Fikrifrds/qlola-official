@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <div className="technologies">
-      {technologies(isDark).map((tech) => (
+      { technologies(isDark).map((tech) => (
         <Img
           title={tech.label}
           src={tech.img}
@@ -19,7 +19,7 @@ export default () => {
           loader={<Loading />}
           unloader={<UnLoader />}
         />
-      ))}
+      )) }
     </div>
   );
 };
