@@ -24,7 +24,7 @@ const Covid19 = () => {
 
   return (
     <div className="covid19">
-      <p className="title">COVID-19 Cases</p>
+      <p className="title"><Text tid="covid19Cases" /></p>
       <select onChange={onChangeValue} value={selectedCountry.iso2} className="country-picker">
         {countries.map((country) => (
           <option value={country.iso2} key={country.name}>{country.name}</option>

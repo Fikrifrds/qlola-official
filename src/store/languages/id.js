@@ -28,5 +28,5 @@ export default {
   from: 'dari',
   global: 'Seluruh Dunia',
   noData: 'Tidak terdapat data',
-
+  covid19Cases: 'Kasus COVID-19',
 };

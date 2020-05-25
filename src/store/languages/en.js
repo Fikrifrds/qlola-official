@@ -28,4 +28,5 @@ export default {
   from: 'from',
   global: 'Global',
   noData: 'No data',
+  covid19Cases: 'COVID-19 Cases',
 };

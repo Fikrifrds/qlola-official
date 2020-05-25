@@ -51,7 +51,10 @@ Card.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   shadow: PropTypes.bool,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+  ]),
   onClick: PropTypes.func,
   to: PropTypes.string,
   children: PropTypes.node.isRequired,

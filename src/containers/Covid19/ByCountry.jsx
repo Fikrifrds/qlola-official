@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import Loading from '../../components/Loading';
 import Card from '../../components/Card';
-import { Text } from '../../context/LanguageContext';
+import { Text, LanguageContext } from '../../context/LanguageContext';
 
 const ByCountry = ({
   country, loading, setLoading,
@@ -11,6 +11,7 @@ const ByCountry = ({
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
   const [noData, setNoData] = useState(false);
+  const languageContext = useContext(LanguageContext);
 
   useEffect(() => {
     if (noData) setNoData(false);
@@ -40,6 +41,8 @@ const ByCountry = ({
     return <div className="covid19">Error...</div>;
   }
 
+  const { language } = languageContext;
+
   return (
     <div>
       <p className="title">
@@ -50,13 +53,13 @@ const ByCountry = ({
       </p>
       <div className="cardContainer">
         <Card title={<Text tid="confirmed" />}>
-          <p className="confirmed">{noData ? 'No Data' : data.confirmed.value.toLocaleString()}</p>
+          <p className="confirmed">{noData ? 'No Data' : data.confirmed.value.toLocaleString(language.id)}</p>
         </Card>
         <Card title={<Text tid="recovered" />}>
-          <p className="recovered">{noData ? 'No Data' : data.recovered.value.toLocaleString()}</p>
+          <p className="recovered">{noData ? 'No Data' : data.recovered.value.toLocaleString(language.id)}</p>
         </Card>
         <Card title={<Text tid="deaths" />}>
-          <p className="deaths">{noData ? 'No Data' : data.deaths.value.toLocaleString()}</p>
+          <p className="deaths">{noData ? 'No Data' : data.deaths.value.toLocaleString(language.id)}</p>
         </Card>
       </div>
       <p className="lastUpdate">
