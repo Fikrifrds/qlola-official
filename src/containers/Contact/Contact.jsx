@@ -27,7 +27,7 @@ const Contact = () => {
       <div>
         Or email to
         {' '}
-        <a href="mailto:fikri@qlola.com?subject=Hello Fikri, Founder of Qlola" className="link link-bold">fikri@qlola.com</a>
+        <a href="mailto:fikri.firdaus26@gmail.com?subject=Hello Fikri, Founder of Qlola" className="link link-bold">fikri.firdaus26@gmail.com</a>
       </div>
     </div>
   );
