@@ -58,7 +58,7 @@ const LanguageProvider = (props) => {
 export function Text(props) {
   const languageContext = useContext(LanguageContext);
 
-  return languageContext.dictionary[props.tid];
+  return languageContext.dictionary[props.tid] || props.tid;
 }
 
 LanguageProvider.propTypes = {

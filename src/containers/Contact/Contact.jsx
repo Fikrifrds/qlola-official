@@ -25,7 +25,7 @@ const Contact = () => {
         </div>
       </Card>
       <div>
-        Or email to
+        <Text tid="Or email to" />
         {' '}
         <a href="mailto:qloladigital@gmail.com?subject=Hello Qlola" className="link link-bold">qloladigital@gmail.com</a>
       </div>

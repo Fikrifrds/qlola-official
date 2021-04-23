@@ -8,6 +8,8 @@ import NodeJsWhite from '../assets/images/technologies/node-white.svg';
 import MongoDB from '../assets/images/technologies/mongodb.svg';
 import Sass from '../assets/images/technologies/sass.svg';
 import VueJs from '../assets/images/technologies/vue.svg';
+import NuxtJs from '../assets/images/technologies/nuxt.svg';
+import NuxtJsWhite from '../assets/images/technologies/nuxt-white.svg';
 // import Php from '../assets/images/technologies/php.svg';
 // import Laravel from '../assets/images/technologies/laravel.svg';
 // import MySql from '../assets/images/technologies/mysql.svg';
@@ -34,6 +36,10 @@ export default (isDark) => [
   {
     label: 'VueJs',
     img: VueJs,
+  },
+  {
+    label: 'NuxtJs',
+    img: isDark ? NuxtJsWhite : NuxtJs,
   },
   {
     label: 'NodeJs',

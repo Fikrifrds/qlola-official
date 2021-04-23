@@ -29,4 +29,5 @@ export default {
   global: 'Seluruh Dunia',
   noData: 'Tidak terdapat data',
   covid19Cases: 'Kasus COVID-19',
+  'Or email to': 'Atau email',
 };
