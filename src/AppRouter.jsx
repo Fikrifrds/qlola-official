@@ -7,7 +7,6 @@ import Projects from './containers/Projects';
 import Blog from './containers/Blog';
 import NoMatch from './containers/NoMatch';
 import ProjectDetails from './containers/ProjectDetails';
-import Covid19 from './containers/Covid19';
 
 export default () => (
   <Switch>
@@ -17,7 +16,6 @@ export default () => (
     <Route path="/blog"><Blog /></Route>
     <Route path="/about-us"><About /></Route>
     <Route path="/contact-us"><Contact /></Route>
-    <Route path="/covid19"><Covid19 /></Route>
 
     <Route exact path="/:locale/"><Home /></Route>
     <Route exact path="/:locale/projects"><Projects /></Route>
