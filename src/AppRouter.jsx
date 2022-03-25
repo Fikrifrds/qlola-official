@@ -23,7 +23,6 @@ export default () => (
     <Route path="/:locale/blog"><Blog /></Route>
     <Route path="/:locale/about-us"><About /></Route>
     <Route path="/:locale/contact-us"><Contact /></Route>
-    <Route path="/:locale/covid19"><Covid19 /></Route>
     <Route path="*"><NoMatch /></Route>
   </Switch>
 );
