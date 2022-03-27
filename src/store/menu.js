@@ -19,11 +19,6 @@ const menu = [
     label: 'Contact Us',
     route: '/contact-us',
   },
-  {
-    id: 'covid19',
-    label: 'COVID-19',
-    route: '/covid19',
-  },
 ];
 
 export default menu;
